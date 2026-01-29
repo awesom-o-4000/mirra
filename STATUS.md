@@ -10,6 +10,6 @@
 - [ ] **Phase 4: QA (QA Specialist)** 👈 *Re-run pending*
 
 ## Updates
-- Fixed viewport metadata.
-- Replaced broken image.
-- Implemented Mobile Container for desktop.
+- Enforced hard width constraints (max-width: 480px) in CSS.
+- Added visual border to desktop view.
+- Changed desktop background to dark gray.

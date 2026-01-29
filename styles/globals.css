@@ -35,14 +35,22 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-  background-color: var(--color-bg);
+  background-color: #111; /* Desktop background */
   color: var(--color-text-primary);
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   line-height: 1.5;
-  overflow: hidden; /* For app-like feel */
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -68,18 +76,39 @@ button {
 .w-full { width: 100%; }
 .h-full { height: 100%; }
 
+/* Mobile Container Constraint */
+/* This ensures the app never exceeds mobile width */
+#mobile-wrapper {
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  background-color: #000;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  border-left: 1px solid rgba(255,255,255,0.1);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+}
+
 /* Scroll Snap Container */
 .snap-container {
-  height: 100vh; /* Fallback */
-  height: 100dvh;
+  height: 100%;
+  width: 100%;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  /* Hide scrollbar */
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.snap-container::-webkit-scrollbar { 
+  display: none; 
 }
 
 .snap-section {
-  height: 100vh;
-  height: 100dvh;
+  height: 100%;
+  width: 100%;
   scroll-snap-align: start;
   position: relative;
   overflow: hidden;
