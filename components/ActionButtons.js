@@ -10,9 +10,9 @@ export default function ActionButtons({ onShop, onShare }) {
   };
   
   return (
-    <div className="flex flex-col items-center gap-6 absolute right-4 bottom-24 z-50">
+    <div className="flex flex-col items-center gap-6">
       {/* Profile/Avatar */}
-      <div className="w-11 h-11 rounded-full border border-white overflow-hidden relative mb-2 shadow-lg">
+      <div className="w-11 h-11 rounded-full border border-white overflow-hidden relative mb-2 shadow-lg cursor-pointer active:scale-95 transition-transform">
         <Image 
           src="/assets/icons/avatar.svg" 
           alt="User" 
@@ -24,24 +24,24 @@ export default function ActionButtons({ onShop, onShare }) {
       </div>
 
       {/* Like */}
-      <button className="flex flex-col items-center gap-1 group" style={{ border: '1px solid rgba(255,0,0,0.5)' }}>
-        <div className="p-2 rounded-full bg-black/20 backdrop-blur-md transition-transform group-active:scale-90">
+      <button className="flex flex-col items-center gap-1 group cursor-pointer">
+        <div className="p-2 rounded-full bg-black/20 backdrop-blur-md transition-transform group-active:scale-90 hover:bg-black/30">
             <img src="/assets/icons/icon-big-heart.svg" alt="Like" style={iconStyle} />
         </div>
         <span className="text-xs font-medium drop-shadow-md">4.2k</span>
       </button>
 
       {/* Shop/Tag */}
-      <button className="flex flex-col items-center gap-1 group" onClick={onShop} style={{ border: '1px solid rgba(255,0,0,0.5)' }}>
-        <div className="p-2 rounded-full bg-black/20 backdrop-blur-md transition-transform group-active:scale-90">
+      <button className="flex flex-col items-center gap-1 group cursor-pointer" onClick={(e) => { e.stopPropagation(); onShop(); }}>
+        <div className="p-2 rounded-full bg-black/20 backdrop-blur-md transition-transform group-active:scale-90 hover:bg-black/30">
             <img src="/assets/icons/icon-big-tag.svg" alt="Shop" style={iconStyle} />
         </div>
         <span className="text-xs font-medium drop-shadow-md">Shop</span>
       </button>
 
       {/* Share */}
-      <button className="flex flex-col items-center gap-1 group" onClick={onShare} style={{ border: '1px solid rgba(255,0,0,0.5)' }}>
-        <div className="p-2 rounded-full bg-black/20 backdrop-blur-md transition-transform group-active:scale-90">
+      <button className="flex flex-col items-center gap-1 group cursor-pointer" onClick={(e) => { e.stopPropagation(); onShare(); }}>
+        <div className="p-2 rounded-full bg-black/20 backdrop-blur-md transition-transform group-active:scale-90 hover:bg-black/30">
             <img src="/assets/icons/icon-small-share.svg" alt="Share" style={iconStyle} />
         </div>
         <span className="text-xs font-medium drop-shadow-md">Share</span>

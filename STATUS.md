@@ -7,8 +7,9 @@
 - [x] **Phase 1: Requirements (PM)**
 - [x] **Phase 2: Design (Designer)**
 - [x] **Phase 3: Build (Coder)**
-- [ ] **Phase 4: QA (QA Specialist)** 👈 *Fixing icons*
+- [ ] **Phase 4: QA (QA Specialist)** 👈 *Fixing positioning/clicks*
 
 ## Updates
-- **Icons**: Switched from `next/image` to `img` tag for direct SVG rendering.
-- **Debug**: Added temporary red borders to buttons to verify position.
+- **Positioning**: Moved ActionButtons to an absolute wrapper in FeedCard.
+- **Interactions**: Fixed z-index layering (z-50) and added `pointer-events-none` to overlays to ensure clicks pass through.
+- **Cleanup**: Removed debug borders.
