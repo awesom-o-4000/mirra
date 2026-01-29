@@ -7,9 +7,9 @@
 - [x] **Phase 1: Requirements (PM)**
 - [x] **Phase 2: Design (Designer)**
 - [x] **Phase 3: Build (Coder)**
-- [ ] **Phase 4: QA (QA Specialist)** 👈 *Re-run pending*
+- [ ] **Phase 4: QA (QA Specialist)** 👈 *Fixes pushed*
 
 ## Updates
-- Enforced hard width constraints (max-width: 480px) in CSS.
-- Added visual border to desktop view.
-- Changed desktop background to dark gray.
+- **Icons**: Added glassmorphism background circles and drop shadows to ensure visibility.
+- **Typography**: Switched to Inter font.
+- **Layout**: Mobile container enforced.

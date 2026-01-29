@@ -1,4 +1,7 @@
+import { Inter } from "next/font/google";
 import "../styles/globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Mirra | Your Feed",
@@ -15,7 +18,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <div id="mobile-wrapper">
           {children}
         </div>
