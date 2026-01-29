@@ -17,7 +17,7 @@ const MOCK_POSTS = [
     id: 2,
     username: "@ron_doe",
     description: "Streetwear vibes for the weekend. Cop or drop?",
-    image: "https://images.unsplash.com/photo-1550246140-51199477e88f?q=80&w=1780&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1512353087810-25dfcd100962?q=80&w=1000&auto=format&fit=crop",
     brand: "Supreme",
     title: "Box Logo Hoodie",
     price: "168.00"
